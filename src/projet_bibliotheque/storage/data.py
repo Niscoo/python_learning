@@ -53,3 +53,10 @@ livres = {
     "9780000000044": {"titre": "Shutter Island", "auteur": "Dennis Lehane", "categorie": "Thriller", "etat_disponibilite": True},
     "9780000000045": {"titre": "Le Parfum", "auteur": "Patrick Süskind", "categorie": "Thriller", "etat_disponibilite": True}
 }
+
+
+utilisateurs = {
+
+    # "":{"nom":, "historique_emprunts":[]}
+
+}
