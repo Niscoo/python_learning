@@ -12,17 +12,7 @@ while True:
     print("3 - afficher la liste des livres")
 
     choix = input ("Tapez le numéro de votre choix")
-    if choix == "1" :
-        isbn = input("entrez isbn")
-        titre = input("entrez titre")
-        auteur = input("entrez auteur")
-        categorie = input("entrez la catégorie")
-        etat = input("le livre est il disponible? o pour oui n pour non")
-
-        etat == True if etat == "o" else False
-        nouveau_livre = Livre(isbn, titre, auteur, categorie, etat)
-
-        ma_bibliotheque.ajouter_livre(nouveau_livre)
+    
         
         
     if choix == "2":
