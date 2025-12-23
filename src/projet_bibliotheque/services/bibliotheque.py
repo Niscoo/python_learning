@@ -28,12 +28,15 @@ class Bibliotheque:
     def ajouter_livre(self, livre):
         self.livres.append(livre)
         
-
     def supprimer_livre(self, isbn):
-        if isbn not in [isbn for isbn in self.livres]:
+        print(livre.isbn for livre in self.livres)
+        if isbn not in [livre.isbn for livre in self.livres]:
             print("le livre n'existe pas")
-        else:
-            self.livres.pop(isbn)
+        elif (livre.isbn == isbn and livre.etat_disponibilite == False for livre in self.livres ) :
+            print("le livre est actuellement emprunté, vous ne pouvez pas le supprimer")
+        else :
+            print("possible de supprimer")
+            self.livres.pop(isbn) 
             print(f"le livre {isbn} a bien été supprimé")
 
     
