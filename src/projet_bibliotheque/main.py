@@ -29,9 +29,5 @@ while True:
         isbn = input("entrez isbn")
         ma_bibliotheque.supprimer_livre(isbn)
 
-    if choix == "3":
-        mes_livres = ma_bibliotheque.get_livres()
-        print("\nLa liste des livres :")
-        for livre in mes_livres:
-            print(livre)
+    
         
