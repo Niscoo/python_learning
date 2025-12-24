@@ -26,7 +26,7 @@ while True:
         ma_bibliotheque.ajouter_livre(nouveau_livre)
         
     if choix == "2":
-        isbn = input("entrez isbn")
+        isbn = input("Entrez isbn")
         ma_bibliotheque.supprimer_livre(isbn)
 
     if choix == "3":
