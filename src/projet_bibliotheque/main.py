@@ -18,7 +18,7 @@ while True:
         titre = input("entrez titre")
         auteur = input("entrez auteur")
         categorie = input("entrez la catégorie")
-        etat = input("le livre est il disponible? o pour oui n pour non")
+        etat = input("le livre est il disponible actuellement? o pour oui n pour non")
 
         etat == True if etat == "o" else False
         nouveau_livre = Livre(isbn, titre, auteur, categorie, etat)
@@ -30,8 +30,8 @@ while True:
         ma_bibliotheque.supprimer_livre(isbn)
 
     if choix == "3":
-        mes_livres = ma_bibliotheque.get_livres()
+        # mes_livres = [Livre]
+        # mes_livres.append(livre for livre in ma_bibliotheque.get_livres())
         print("\nLa liste des livres :")
-        for livre in mes_livres:
-            print(livre)
+        print(livre for livre in ma_bibliotheque.get_livres())
         

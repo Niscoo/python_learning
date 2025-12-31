@@ -2,8 +2,8 @@ from models.livres import Livre
 
 class Bibliotheque:
     def __init__(self, livres, utilisateurs):
-        self.livres = []
-        self.utilisateurs = []
+        self.livres = {}
+        self.utilisateurs = {}
         
         for isbn in livres:  
             livre_data = livres[isbn]
@@ -14,10 +14,10 @@ class Bibliotheque:
                 categorie=livre_data["categorie"], 
                 etat_disponibilite=livre_data["etat_disponibilite"]
             )
-            self.livres.append(livre_obj)
+            self.livres[isbn] = livre_obj
 
-        for utilisateur in utilisateurs:
-            self.utilisateurs.append(utilisateur)
+        # for utilisateur in utilisateurs:
+        #     return
 
     def get_livres(self):
         return self.livres
@@ -26,17 +26,15 @@ class Bibliotheque:
         return self.utilisateurs
 
     def ajouter_livre(self, livre):
-        self.livres.append(livre)
+        self.livres[livre.isbn] = livre
         
     def supprimer_livre(self, isbn):
-        print(livre.isbn for livre in self.livres)
-        if isbn not in [livre.isbn for livre in self.livres]:
-            print("le livre n'existe pas")
-        elif (livre.isbn == isbn and livre.etat_disponibilite == False for livre in self.livres ) :
-            print("le livre est actuellement emprunté, vous ne pouvez pas le supprimer")
-        else :
-            print("possible de supprimer")
-            self.livres.pop(isbn) 
-            print(f"le livre {isbn} a bien été supprimé")
+        if isbn not in self.livres:
+            print("Le livre n'existe pas")
+        elif not self.livres[isbn].etat_disponibilite:
+            print("suppression impossible, le livre est emprunté")
+        else:
+            self.livres.pop(isbn)
+            print("Le livre a bien été supprimé")
 
-    
+
