@@ -9,4 +9,4 @@ class Livre:
         self.etat_disponibilite = etat_disponibilite
 
     def __str__(self):
-        return f"- {self.titre} écrit par {self.auteur} (ISBN: {self.isbn})"
+        return f"- {self.titre} écrit par {self.auteur} (ISBN: {self.isbn}) etat: {self.etat_disponibilite}"

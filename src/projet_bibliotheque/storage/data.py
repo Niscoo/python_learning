@@ -56,7 +56,22 @@ livres = {
 
 
 utilisateurs = {
-
-    # "":{"nom":, "historique_emprunts":[]}
-
+    "U001": {
+        "nom": "Dupont",
+        "prenom": "Alice",
+        "email": "alice.dupont@mail.com",
+        "livres_empruntes": []
+    },
+    "U002": {
+        "nom": "Martin",
+        "prenom": "Lucas",
+        "email": "lucas.martin@mail.com",
+        "livres_empruntes": ["9780000000003"]
+    },
+    "U003": {
+        "nom": "Bernard",
+        "prenom": "Emma",
+        "email": "emma.bernard@mail.com",
+        "livres_empruntes": []
+    }
 }
