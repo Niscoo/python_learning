@@ -67,7 +67,7 @@ class Bibliotheque:
             print("Le livre a bien été supprimé")
 
 
-    def rechercher_livre(self, type_recherche, terme_recherche):
+    def rechercher_livre(self, type_recherche, terme_recherche): 
         resultats = []
         for livre in self.livres.values():
             if type_recherche == "a" and livre.isbn == terme_recherche:
